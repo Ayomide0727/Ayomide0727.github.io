@@ -1,23 +1,17 @@
 export const educationData = [
     {
         id: 1,
-        institution: 'Marble Hills Middle School',
+        institution: 'Federal Government Girl’s College, Akure',
         course: 'Higher Secondary Education',
-        startYear: '2007',
-        endYear: '2015'
+        startYear: '2015',
+        endYear: '2021'
     },
     {
         id: 2,
-        institution: 'Somerset School of Science',
-        course: 'Bachelor of Technology',
-        startYear: '2015',
-        endYear: '2019'
+        institution: 'Bowie State University',
+        course: 'Bachelor of Science in Computer Science',
+        startYear: '2025',
+        endYear: '2017'
     },
-    {
-        id: 3,
-        institution: 'Hawking University, Cambridge',
-        course: 'Master of Technology',
-        startYear: '2019',
-        endYear: 'Present'
-    },
+    
 ]
