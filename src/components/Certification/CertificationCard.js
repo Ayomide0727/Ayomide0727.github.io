@@ -6,14 +6,14 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 
 import { AiOutlineFolder } from "react-icons/ai";
 
-import './Achievement.css'
+import './Certification.css'
 
-function AchievementCard({id, title, details, date, field, image, link}) {
+function CertificationCard({id, title, details, date, field, image, link}) {
 
     const { theme } = useContext(ThemeContext);
 
     const useStyles = makeStyles((t) => ({
-        achievementCard : {
+        certificationCard : {
             backgroundColor:theme.primary30,
             "&:hover": {
                 backgroundColor:theme.primary50,
@@ -24,9 +24,9 @@ function AchievementCard({id, title, details, date, field, image, link}) {
     const classes = useStyles();
     return (
         <Fade bottom>
-           <div key={id} className={`achievement-card ${classes.achievementCard}`}>
-               <div className="achievecard-content">
-                    <div className="achievecard-details1">
+           <div key={id} className={`certification-card ${classes.certificationCard}`}>
+               <div className="certcard-content">
+                    <div className="certcard-details1">
                         <h2 style={{color: theme.tertiary}}>{title}</h2>
                         <p style={{color: theme.tertiary80}}>{details}</p>
                         {link && (
@@ -40,15 +40,15 @@ function AchievementCard({id, title, details, date, field, image, link}) {
                             </a>
                         )}
                     </div>
-                    <div className="achievecard-details2" style={{color: theme.primary}}>
+                    <div className="certcard-details2" style={{color: theme.primary}}>
                         <h5>{date}</h5>
-                        <div className="achievecard-field">
+                        <div className="certcard-field">
                             <AiOutlineFolder />
                             <h5>{field}</h5>
                         </div>   
                     </div>
                 </div> 
-                <div className="achievecard-imgcontainer">
+                <div className="certcard-imgcontainer">
                     <img src={image} alt="" />
                 </div>
            </div>
@@ -57,4 +57,4 @@ function AchievementCard({id, title, details, date, field, image, link}) {
     )
 }
 
-export default AchievementCard
+export default CertificationCard

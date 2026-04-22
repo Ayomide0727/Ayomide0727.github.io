@@ -1,6 +1,6 @@
-export const achievementData = {
-    bio : "Putting quantified achievements on a resume is great, but I just don’t work with hard numbers. I have no data to support the quality of my work. If you have lots of relevant experience, the heading statement of your resume will be a summary.",
-    achievements : [
+export const certificationData = {
+    bio : "Here are some certifications I have earned through hands-on training in artificial intelligence, cybersecurity, and web development.",
+    certifications : [
         {
             id : 1,
             title : 'AI Python for Beginners',
@@ -41,14 +41,12 @@ export const achievementData = {
         {
             id : 5,
             title : 'Intro to Web Development',
-            details : 'Earned a certificate form CodePath for  completing a comprehensive course on full stack web development using React and related technologies.',
+            details : 'Earned a certificate from CodePath for completing a comprehensive course on full stack web development using React and related technologies.',
             date : 'August, 2025',
             field : 'Web Development',
             image : 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80',
             link:'https://drive.google.com/file/d/14KD6wp7J-j3NeTb_Lu4spcjTC7XnmxZK/view'
         }
-
-
     ]
 }
 
@@ -58,9 +56,9 @@ export const achievementData = {
 
 /*
 
-export const achievementData = {
+export const certificationData = {
     bio : "",
-    achievements : []
+    certifications : []
 }
 
 */
