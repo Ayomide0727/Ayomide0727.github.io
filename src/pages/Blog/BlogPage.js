@@ -1,48 +1,22 @@
 import React, { useContext, useState } from 'react'
 import { Helmet } from 'react-helmet'
-import { Grid } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import { AiOutlineHome } from "react-icons/ai";
+import { FaPlay } from 'react-icons/fa';
 
 import './BlogPage.css'
-import { SingleBlog } from '../../components'
 import { ThemeContext } from '../../contexts/ThemeContext';
-import { blogData } from '../../data/blogData'
+import { pitchVideoData } from '../../data/pitchVideoData'
 import { headerData } from '../../data/headerData'
 
 function BlogPage() {
 
-    const [search, setSearch] = useState('')
+    const [videoError, setVideoError] = useState(false)
     const { theme } = useContext(ThemeContext);
-
-    const filteredArticles = blogData.filter((blog) => {
-        const content = blog.title + blog.description + blog.date
-        return content.toLowerCase().includes(search.toLowerCase())
-    })
 
 
     const useStyles = makeStyles((t) => ({
-        search : {
-            color: theme.tertiary, 
-            width: '40%',
-            height: '2.75rem',
-            outline: 'none',
-            border: 'none',
-            borderRadius: '20px',
-            padding: '0.95rem 1rem',
-            fontFamily: "'Noto Sans TC', sans-serif",
-            fontWeight: 500,
-            fontSize: '0.9rem',  
-            backgroundColor: theme.secondary, 
-            boxShadow: theme.type === 'dark' ? 'inset 3px 3px 6px #ffffff10, inset -3px -3px 6px #00000060' : 'inset 3px 3px 6px #ffffffbd, inset -3px -3px 6px #00000030',
-            "&::placeholder": {
-                color: theme.tertiary80, 
-            },
-            [t.breakpoints.down('sm')]: {
-                width:'350px',
-            },
-        },
         home: {
             color: theme.secondary,
             position: 'absolute',
@@ -71,33 +45,50 @@ function BlogPage() {
     return (
         <div className="blogPage" style={{backgroundColor: theme.secondary}}>
             <Helmet>
-                <title>{headerData.name} | Blog</title>
+                <title>{headerData.name} | Elevator Pitch</title>
             </Helmet>
             <div className="blogPage--header" style={{backgroundColor: theme.primary}}>
                 <Link to="/">
                     <AiOutlineHome className={classes.home}/>
                 </Link>
-                <h1 style={{color: theme.secondary}}>Blogs</h1>
+                <div className="blogPage--headerCopy">
+                    <p style={{color: theme.secondary70}}>Video introduction</p>
+                    <h1 style={{color: theme.secondary}}>{pitchVideoData.title}</h1>
+                </div>
             </div>
             <div className="blogPage--container">
-                <div className="blog--search">
-                    <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Seach blog..." className={classes.search}/>
-                </div>
-                <div className="blogs--container">
-                    <Grid className="blog-grid" container direction="row" alignItems="center" justifyContent="center">
-                        {filteredArticles.reverse().map(blog => (
-                            <SingleBlog 
-                                theme={theme}
-                                title={blog.title}
-                                desc={blog.description}
-                                date={blog.date}
-                                image={blog.image}
-                                url={blog.url}
-                                key={blog.id}
-                                id={blog.id}
-                            />
-                        ))}
-                    </Grid>
+                <div className="blogPage--content">
+                    <div className="blogPage--videoCard" style={{backgroundColor: theme.primary400}}>
+                        {!videoError ? (
+                            <video
+                                className="blogPage--video"
+                                controls
+                                playsInline
+                                preload="metadata"
+                                onError={() => setVideoError(true)}
+                            >
+                                <source src={pitchVideoData.videoSrc} type="video/mp4" />
+                            </video>
+                        ) : (
+                            <div className="blogPage--videoFallback" style={{backgroundColor: theme.primary400}}>
+                                <div className="blogPage--videoFallbackIcon" style={{backgroundColor: theme.secondary}}>
+                                    <FaPlay />
+                                </div>
+                                <h2 style={{color: theme.secondary}}>{pitchVideoData.fallbackTitle}</h2>
+                                <p style={{color: theme.secondary70}}>{pitchVideoData.fallbackText}</p>
+                            </div>
+                        )}
+                    </div>
+
+                    <div className="blogPage--summary" style={{backgroundColor: theme.primary400}}>
+                        <h2 style={{color: theme.secondary}}>What this pitch covers</h2>
+                        <p style={{color: theme.secondary70}}>{pitchVideoData.description}</p>
+                        <ul>
+                            {pitchVideoData.highlights.map((item) => (
+                                <li key={item} style={{color: theme.secondary70}}>{item}</li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

@@ -22,7 +22,8 @@ function App() {
         <ScrollToTop/>
         <Switch>
           <Route path="/" exact component={Main} />
-          <Route path="/blog" exact component={BlogPage} />
+          <Route path="/pitch" exact component={BlogPage} />
+          <Route path="/blog" exact render={() => <Redirect to="/pitch" />} />
           <Route path="/projects" exact component={ProjectPage} />
 
           <Redirect to="/" />
