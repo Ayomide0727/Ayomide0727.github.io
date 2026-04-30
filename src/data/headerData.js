@@ -1,5 +1,5 @@
 import resume from '../assets/pdf/resume.pdf'
-import profileImg from '../assets/png/profile.jpeg'
+import profileImg from '../assets/png/profile.png'
 
 export const headerData = {
     name: 'Ayomide Aisida',
