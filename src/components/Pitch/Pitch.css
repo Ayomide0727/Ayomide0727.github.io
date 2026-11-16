@@ -1,4 +1,4 @@
-.blog {
+.pitch {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -9,7 +9,7 @@
 }
 
 
-.blog--header {
+.pitch--header {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -19,12 +19,12 @@
 }
 
 
-.blog--headerCopy {
+.pitch--headerCopy {
     max-width: 760px;
 }
 
 
-.blog--eyebrow {
+.pitch--eyebrow {
     margin: 0 0 0.9rem;
     font-size: 0.95rem;
     letter-spacing: 0.18em;
@@ -34,14 +34,14 @@
 }
 
 
-.blog--header h1 {
+.pitch--header h1 {
     margin-bottom: 1rem;
     font-size: 4rem;
     font-family: var(--primaryFont);
 }
 
 
-.blog--intro {
+.pitch--intro {
     margin: 0;
     max-width: 720px;
     font-size: 1.05rem;
@@ -49,7 +49,7 @@
     font-family: var(--primaryFont);
 }
 
-.blog--body {
+.pitch--body {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -57,7 +57,7 @@
     gap: 2rem;
 }
 
-.blog--videoCard {
+.pitch--videoCard {
     flex: 1.4;
     min-height: 420px;
     border-radius: 28px;
@@ -66,7 +66,7 @@
 }
 
 
-.blog--video {
+.pitch--video {
     display: block;
     width: 100%;
     height: 100%;
@@ -76,7 +76,7 @@
 }
 
 
-.blog--videoFallback {
+.pitch--videoFallback {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -89,7 +89,7 @@
 }
 
 
-.blog--videoFallbackIcon {
+.pitch--videoFallbackIcon {
     width: 72px;
     height: 72px;
     border-radius: 50%;
@@ -101,14 +101,14 @@
 }
 
 
-.blog--videoFallback h3 {
+.pitch--videoFallback h3 {
     margin: 0 0 0.8rem;
     font-size: 2rem;
     font-family: var(--primaryFont);
 }
 
 
-.blog--videoFallback p {
+.pitch--videoFallback p {
     margin: 0;
     max-width: 30rem;
     line-height: 1.7;
@@ -116,7 +116,7 @@
 }
 
 
-.blog--highlights {
+.pitch--highlights {
     flex: 0.8;
     min-height: 420px;
     border-radius: 28px;
@@ -128,7 +128,7 @@
 }
 
 
-.blog--highlights h2 {
+.pitch--highlights h2 {
     margin: 0 0 1.2rem;
     font-size: 2rem;
     line-height: 1.15;
@@ -136,13 +136,13 @@
 }
 
 
-.blog--highlights ul {
+.pitch--highlights ul {
     margin: 0;
     padding-left: 1.25rem;
 }
 
 
-.blog--highlights li {
+.pitch--highlights li {
     margin-bottom: 1rem;
     font-size: 1.02rem;
     line-height: 1.7;
@@ -150,7 +150,7 @@
 }
 
 
-.blog--viewAll {
+.pitch--viewAll {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
@@ -158,12 +158,12 @@
 }
 
 
-.blog--viewAll a {
+.pitch--viewAll a {
     text-decoration: none;
 }
 
 
-.blog--viewAll a button {
+.pitch--viewAll a button {
     outline: none;
     border: none;
     width: 170px;
@@ -181,7 +181,7 @@
 }
 
 
-.blog--viewAll a button svg {
+.pitch--viewAll a button svg {
     margin-right: 0.85rem;
 }
 
@@ -192,67 +192,67 @@
 
 
 @media screen and (max-width: 992px) {
-    .blog {
+    .pitch {
         padding: 3.5rem 1.5rem;
     }
 
-    .blog--header {
+    .pitch--header {
         align-items: flex-start;
         flex-direction: column;
         margin-bottom: 2rem;
     }
 
-    .blog--header h1 {
+    .pitch--header h1 {
         font-size: 3.2rem;
         margin-bottom: 0.85rem;
     }
 
-    .blog--body {
+    .pitch--body {
         flex-direction: column;
     }
 
-    .blog--videoCard,
-    .blog--highlights {
+    .pitch--videoCard,
+    .pitch--highlights {
         width: 100%;
         min-height: auto;
     }
 
-    .blog--video,
-    .blog--videoFallback {
+    .pitch--video,
+    .pitch--videoFallback {
         min-height: 360px;
     }
 }
 
 @media screen and (max-width: 800px) {
-    .blog--header h1 {
+    .pitch--header h1 {
         font-size: 2.8rem;
     }
 
-    .blog--highlights h2 {
+    .pitch--highlights h2 {
         font-size: 1.7rem;
     }
 }
 
 @media screen and (max-width: 600px) {
-    .blog--header h1 {
+    .pitch--header h1 {
         font-size: 2.4rem;
     }
 
-    .blog--intro {
+    .pitch--intro {
         font-size: 0.98rem;
     }
 
-    .blog--highlights,
-    .blog--videoCard {
+    .pitch--highlights,
+    .pitch--videoCard {
         border-radius: 22px;
     }
 
-    .blog--video,
-    .blog--videoFallback {
+    .pitch--video,
+    .pitch--videoFallback {
         min-height: 300px;
     }
 
-    .blog--viewAll {
+    .pitch--viewAll {
         width: 100%;
         justify-content: flex-start;
     }

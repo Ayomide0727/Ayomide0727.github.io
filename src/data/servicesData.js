@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { FaUsers, FaUniversity, FaCodeBranch, FaLaptopCode, FaHandsHelping, FaGlobe, FaCode } from "react-icons/fa";
 
  

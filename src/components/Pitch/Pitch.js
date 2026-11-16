@@ -4,12 +4,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import { HiArrowRight } from "react-icons/hi";
 import { FaPlay } from 'react-icons/fa';
 
-import './Blog.css';
+import './Pitch.css';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { pitchVideoData } from '../../data/pitchVideoData'
 
 
-function Blog() {
+function Pitch() {
 
     const { theme } = useContext(ThemeContext);
     const [videoError, setVideoError] = useState(false)
@@ -42,14 +42,14 @@ function Blog() {
     const classes = useStyles();
 
     return (
-        <div className="blog" id="pitch" style={{backgroundColor: theme.secondary}}>
-            <div className="blog--header">
-                <div className="blog--headerCopy">
-                    <p className="blog--eyebrow" style={{color: theme.primary}}>{pitchVideoData.eyebrow}</p>
+        <div className="pitch" id="pitch" style={{backgroundColor: theme.secondary}}>
+            <div className="pitch--header">
+                <div className="pitch--headerCopy">
+                    <p className="pitch--eyebrow" style={{color: theme.primary}}>{pitchVideoData.eyebrow}</p>
                     <h1 style={{color: theme.primary}}>{pitchVideoData.title}</h1>
-                    <p className="blog--intro" style={{color: theme.tertiary80}}>{pitchVideoData.description}</p>
+                    <p className="pitch--intro" style={{color: theme.tertiary80}}>{pitchVideoData.description}</p>
                 </div>
-                <div className="blog--viewAll">
+                <div className="pitch--viewAll">
                     <Link to="/pitch">
                         <button className={classes.viewAllBtn}>
                             {pitchVideoData.ctaLabel}
@@ -58,11 +58,11 @@ function Blog() {
                     </Link>
                 </div>
             </div>
-            <div className="blog--body">
-                <div className="blog--videoCard" style={{backgroundColor: theme.primary400}}>
+            <div className="pitch--body">
+                <div className="pitch--videoCard" style={{backgroundColor: theme.primary400}}>
                     {!videoError ? (
                         <video
-                            className="blog--video"
+                            className="pitch--video"
                             controls
                             playsInline
                             preload="metadata"
@@ -71,8 +71,8 @@ function Blog() {
                             <source src={pitchVideoData.videoSrc} type="video/mp4" />
                         </video>
                     ) : (
-                        <div className="blog--videoFallback" style={{backgroundColor: theme.primary400}}>
-                            <div className="blog--videoFallbackIcon" style={{backgroundColor: theme.secondary}}>
+                        <div className="pitch--videoFallback" style={{backgroundColor: theme.primary400}}>
+                            <div className="pitch--videoFallbackIcon" style={{backgroundColor: theme.secondary}}>
                                 <FaPlay />
                             </div>
                             <h3 style={{color: theme.secondary}}>{pitchVideoData.fallbackTitle}</h3>
@@ -81,7 +81,7 @@ function Blog() {
                     )}
                 </div>
 
-                <div className="blog--highlights" style={{backgroundColor: theme.primary400}}>
+                <div className="pitch--highlights" style={{backgroundColor: theme.primary400}}>
                     <h2 style={{color: theme.secondary}}>What the pitch covers</h2>
                     <ul>
                         {pitchVideoData.highlights.map((item) => (
@@ -94,4 +94,4 @@ function Blog() {
     )
 }
 
-export default Blog
+export default Pitch

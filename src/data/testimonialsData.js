@@ -1,4 +1,3 @@
-/* eslint-disable */
 import girl1 from '../assets/svg/testimonials/girl1.svg'
 import boy1 from '../assets/svg/testimonials/boy1.svg'
 

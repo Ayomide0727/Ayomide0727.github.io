@@ -5,12 +5,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import { AiOutlineHome } from "react-icons/ai";
 import { FaPlay } from 'react-icons/fa';
 
-import './BlogPage.css'
+import './PitchPage.css'
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { pitchVideoData } from '../../data/pitchVideoData'
 import { headerData } from '../../data/headerData'
 
-function BlogPage() {
+function PitchPage() {
 
     const [videoError, setVideoError] = useState(false)
     const { theme } = useContext(ThemeContext);
@@ -43,25 +43,25 @@ function BlogPage() {
     const classes = useStyles();
 
     return (
-        <div className="blogPage" style={{backgroundColor: theme.secondary}}>
+        <div className="pitchPage" style={{backgroundColor: theme.secondary}}>
             <Helmet>
                 <title>{headerData.name} | Elevator Pitch</title>
             </Helmet>
-            <div className="blogPage--header" style={{backgroundColor: theme.primary}}>
+            <div className="pitchPage--header" style={{backgroundColor: theme.primary}}>
                 <Link to="/">
                     <AiOutlineHome className={classes.home}/>
                 </Link>
-                <div className="blogPage--headerCopy">
+                <div className="pitchPage--headerCopy">
                     <p style={{color: theme.secondary70}}>Video introduction</p>
                     <h1 style={{color: theme.secondary}}>{pitchVideoData.title}</h1>
                 </div>
             </div>
-            <div className="blogPage--container">
-                <div className="blogPage--content">
-                    <div className="blogPage--videoCard" style={{backgroundColor: theme.primary400}}>
+            <div className="pitchPage--container">
+                <div className="pitchPage--content">
+                    <div className="pitchPage--videoCard" style={{backgroundColor: theme.primary400}}>
                         {!videoError ? (
                             <video
-                                className="blogPage--video"
+                                className="pitchPage--video"
                                 controls
                                 playsInline
                                 preload="metadata"
@@ -70,8 +70,8 @@ function BlogPage() {
                                 <source src={pitchVideoData.videoSrc} type="video/mp4" />
                             </video>
                         ) : (
-                            <div className="blogPage--videoFallback" style={{backgroundColor: theme.primary400}}>
-                                <div className="blogPage--videoFallbackIcon" style={{backgroundColor: theme.secondary}}>
+                            <div className="pitchPage--videoFallback" style={{backgroundColor: theme.primary400}}>
+                                <div className="pitchPage--videoFallbackIcon" style={{backgroundColor: theme.secondary}}>
                                     <FaPlay />
                                 </div>
                                 <h2 style={{color: theme.secondary}}>{pitchVideoData.fallbackTitle}</h2>
@@ -80,7 +80,7 @@ function BlogPage() {
                         )}
                     </div>
 
-                    <div className="blogPage--summary" style={{backgroundColor: theme.primary400}}>
+                    <div className="pitchPage--summary" style={{backgroundColor: theme.primary400}}>
                         <h2 style={{color: theme.secondary}}>What this pitch covers</h2>
                         <p style={{color: theme.secondary70}}>{pitchVideoData.description}</p>
                         <ul>
@@ -95,4 +95,4 @@ function BlogPage() {
     )
 }
 
-export default BlogPage
+export default PitchPage

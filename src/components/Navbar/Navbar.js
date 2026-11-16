@@ -145,13 +145,7 @@ function Navbar() {
             </div>
             <Drawer
                 variant='temporary'
-                onClose={(event, reason) => {
-                    if (reason !== 'backdropClick') {
-                        handleDrawerClose();
-                    } else if (reason !== 'escapeKeyDown') {
-                        handleDrawerClose();
-                    }
-                }}
+                onClose={handleDrawerClose}
                 anchor='left'
                 open={open}
                 classes={{ paper: classes.MuiDrawer }}

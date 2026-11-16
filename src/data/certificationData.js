@@ -30,16 +30,3 @@ export const certificationData = {
         }
     ]
 }
-
-
-// Do not remove any fields.
-// Leave it blank instead as shown below.
-
-/*
-
-export const certificationData = {
-    bio : "",
-    certifications : []
-}
-
-*/

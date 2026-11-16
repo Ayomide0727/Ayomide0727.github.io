@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
-import { Main, BlogPage, ProjectPage } from './pages'
+import { Main, PitchPage, ProjectPage } from './pages'
 import { BackToTop } from './components'
 import ScrollToTop from './utils/ScrollToTop'
 
@@ -15,8 +15,7 @@ function App() {
         <ScrollToTop/>
         <Switch>
           <Route path="/" exact component={Main} />
-          <Route path="/pitch" exact component={BlogPage} />
-          <Route path="/blog" exact render={() => <Redirect to="/pitch" />} />
+          <Route path="/pitch" exact component={PitchPage} />
           <Route path="/projects" exact component={ProjectPage} />
 
           <Redirect to="/" />

@@ -3,6 +3,6 @@ export const contactsData = {
     phone: '',
     address: 'Maryland, United States ',
 
-    // Formspree endpoint, e.g. 'https://formspree.io/f/xxxxxxxx'
+    // Formspree endpoint that forwards form submissions to my email
     formEndpoint: 'https://formspree.io/f/mzerewkn'
 }
