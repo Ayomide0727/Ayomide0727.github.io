@@ -35,7 +35,7 @@ export const certificationData = {
             details : 'Completed IBM SkillsBuild certification covering core cybersecurity concepts, threats, and defense strategies.',
             date : 'January 16, 2026',
             field : 'Cybersecurity',
-            image : 'https://unsplash.com/photos/ibm-logo-0mXw-dvuLok',
+            image : 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1050&q=80',
             link:'https://www.coursera.org/account/accomplishments/certificate/2KZ7Q9Z5K9L4'
         },
         {

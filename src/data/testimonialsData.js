@@ -2,8 +2,6 @@
 import girl1 from '../assets/svg/testimonials/girl1.svg'
 import boy1 from '../assets/svg/testimonials/boy1.svg'
 
-// Excerpts from a letter of recommendation by Dr. Ruth Agada (May 2026)
-// and a TA nomination email from Dr. Md Kamruzzaman Sarker.
 
 export const testimonialsData = [
     {

@@ -11,7 +11,7 @@ export const educationData = [
         institution: 'Bowie State University',
         course: 'Bachelor of Science in Computer Science',
         startYear: '2025',
-        endYear: '2017'
+        endYear: '2027'
     },
     
 ]
