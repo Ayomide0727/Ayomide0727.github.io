@@ -50,6 +50,7 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                     </h2>
                     <img src={image ? image : placeholder} alt={name} />
                     <div className='project--showcaseBtn'>
+                        {demo && (
                         <a
                             href={demo}
                             target='_blank'
@@ -69,6 +70,8 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                                 aria-label='Demo'
                             />
                         </a>
+                        )}
+                        {code && (
                         <a
                             href={code}
                             target='_blank'
@@ -88,6 +91,7 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                                 aria-label='Code'
                             />
                         </a>
+                        )}
                     </div>
                 </div>
                 <p
