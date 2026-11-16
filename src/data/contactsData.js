@@ -1,7 +1,8 @@
 export const contactsData = {
     email: 'ayomideann3@gmail.com',
-    phone: '+1 (443) 623-4417',
+    phone: '',
     address: 'Maryland, United States ',
 
-    sheetAPI: ''
+    // Formspree endpoint, e.g. 'https://formspree.io/f/xxxxxxxx'
+    formEndpoint: 'https://formspree.io/f/mzerewkn'
 }

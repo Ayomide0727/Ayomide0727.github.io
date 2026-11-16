@@ -1,55 +1,23 @@
 /* eslint-disable */
 import girl1 from '../assets/svg/testimonials/girl1.svg'
-import girl2 from '../assets/svg/testimonials/girl2.svg'
-import girl3 from '../assets/svg/testimonials/girl3.svg'
 import boy1 from '../assets/svg/testimonials/boy1.svg'
-import boy2 from '../assets/svg/testimonials/boy2.svg'
-import boy3 from '../assets/svg/testimonials/boy3.svg'
 
-
+// Excerpts from a letter of recommendation by Dr. Ruth Agada (May 2026)
+// and a TA nomination email from Dr. Md Kamruzzaman Sarker.
 
 export const testimonialsData = [
     {
         id: 1,
-        name: 'Chandler Bing',
-        title: 'Transponster',
-        text: "Building my own portfolio could've never been easier than this. The only areas I'm good at are Math, Jokes and Dance.",
-        image: boy2
-    },
-    {
-        id: 2,
-        name: 'Monica Geller',
-        title: 'Head Chef',
-        text: "This is the only thing that I didn't have to spend time to sort out. It's tidy all by itself.",
-        image: girl2
-    },
-    {
-        id: 3,
-        name: 'Phoebe Buffay',
-        title: 'Massuese',
-        text: "Heard of the song 'Smelly Cat!!' ? This website made it viral. Plus portfolio is the only thing that Ursula doesn't have :)",
+        name: 'Dr. Ruth Agada',
+        title: 'Lecturer, Computer Science, Bowie State University',
+        text: "Ms. Aisida is a 4.0 GPA Computer Science major and a three-time Dean's List honoree. Her academic discipline and intellectual curiosity set her apart as one of the strongest students in our program.",
         image: girl1
     },
     {
-        id: 4,
-        name: 'Joey Tribbiani',
-        title: 'Actor',
-        text: "Making my portfolio with this helped me get my role as 'Dr. Drake Ramoray' in 'Days Of Our Lives'. You guys are the best !",
+        id: 2,
+        name: 'Dr. Md Kamruzzaman Sarker',
+        title: 'Assistant Professor, Computer Science, Bowie State University',
+        text: "Ayomide is an outstanding student who earned an A in both of my courses and maintains a 4.0 CGPA. I nominated her as a teaching assistant for COSC 430 and COSC 431 because of her strong academic record.",
         image: boy1
-    },
-    {
-        id: 5,
-        name: 'Rachel Green',
-        title: 'Sales Executive',
-        text: 'Ralph Lauren was one of the best things that ever happened to me. My portfolio made that dream happen. I owe you guys.',
-        image: girl3
-    },
-    {
-        id: 6,
-        name: 'Ross Geller',
-        title: 'Paleontologist',
-        text: "Be it 'Rocks' or 'Bones', you need a website to display it. This is it. Great work guys !",
-        image: boy3
     }
 ]
-

@@ -140,16 +140,29 @@ function Contacts() {
                     message: message,
                 };
 
-                axios.post(contactsData.sheetAPI, responseData).then((res) => {
-                    console.log('success');
-                    setSuccess(true);
-                    setErrMsg('');
+                if (!contactsData.formEndpoint) {
+                    setErrMsg('Contact form is not configured yet');
+                    setOpen(true);
+                    return;
+                }
 
-                    setName('');
-                    setEmail('');
-                    setMessage('');
-                    setOpen(false);
-                });
+                axios
+                    .post(contactsData.formEndpoint, responseData, {
+                        headers: { Accept: 'application/json' },
+                    })
+                    .then(() => {
+                        setSuccess(true);
+                        setErrMsg('');
+
+                        setName('');
+                        setEmail('');
+                        setMessage('');
+                        setOpen(false);
+                    })
+                    .catch(() => {
+                        setErrMsg('Something went wrong. Please try again.');
+                        setOpen(true);
+                    });
             } else {
                 setErrMsg('Invalid email');
                 setOpen(true);
@@ -292,17 +305,19 @@ function Contacts() {
                                 {contactsData.email}
                             </p>
                         </a>
-                        <a
-                            href={`tel:${contactsData.phone}`}
-                            className='personal-details'
-                        >
-                            <div className={classes.detailsIcon}>
-                                <FiPhone />
-                            </div>
-                            <p style={{ color: theme.tertiary }}>
-                                {contactsData.phone}
-                            </p>
-                        </a>
+                        {contactsData.phone && (
+                            <a
+                                href={`tel:${contactsData.phone}`}
+                                className='personal-details'
+                            >
+                                <div className={classes.detailsIcon}>
+                                    <FiPhone />
+                                </div>
+                                <p style={{ color: theme.tertiary }}>
+                                    {contactsData.phone}
+                                </p>
+                            </a>
+                        )}
                         <div className='personal-details'>
                             <div className={classes.detailsIcon}>
                                 <HiOutlineLocationMarker />
