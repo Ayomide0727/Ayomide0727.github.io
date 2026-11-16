@@ -1,12 +1,12 @@
 /* eslint-disable */
-import { FaUsers, FaUniversity, FaCodeBranch, FaLaptopCode, FaHandsHelping, FaGlobe } from "react-icons/fa";
+import { FaUsers, FaUniversity, FaCodeBranch, FaLaptopCode, FaHandsHelping, FaGlobe, FaCode } from "react-icons/fa";
 
  
 
 export const servicesData = [
     {
         id: 1,
-        title: 'CodePath Alumi',
+        title: 'CodePath Alumni',
         icon: <FaUsers />
     },
     {
@@ -21,7 +21,7 @@ export const servicesData = [
     },
     {
         id: 4,
-        title: 'Women in Computer Science (WICS)',
+        title: 'Chair of Logistics, Women in Computer Science (WICS)',
         icon: <FaLaptopCode />
     },
     {
@@ -33,6 +33,11 @@ export const servicesData = [
         id: 6,
         title: 'Girls Who Code',
         icon: <FaGlobe />
+    },
+    {
+        id: 7,
+        title: 'Vice President, Bulldog Coders',
+        icon: <FaCode />
     },
 ]
 
